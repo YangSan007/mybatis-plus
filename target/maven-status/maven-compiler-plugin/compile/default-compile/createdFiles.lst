@@ -1,0 +1,4 @@
+com\lidong\it\configuration\MybatisPlusConfig.class
+com\lidong\it\mp\MpApplication.class
+com\lidong\it\mp\dao\UserMapper.class
+com\lidong\it\mp\entity\User.class

@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: MybatisPlusFrist-crud
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: 8150
+Implementation-Vendor-Id: com.lidong.it.mp
+Build-Jdk: 1.8.0_102
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-bo
+ ot-starter-parent/MybatisPlusFrist-crud
+Created-By: Maven Integration for Eclipse
+
