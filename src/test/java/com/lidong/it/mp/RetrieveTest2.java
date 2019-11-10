@@ -46,22 +46,24 @@ public class RetrieveTest2 {
 				public void selectPage() {
 					QueryWrapper<User> queryWrapper=new QueryWrapper<User>();
 					queryWrapper.ge("age",26);
-					
+				
 				   Page<User> page=new Page<>(1,2);
 				    
 				    
 				    IPage<User> iPage=userMapper.selectPage(page, queryWrapper);
 				    
 				    
-				    System.out.println("总页数"+iPage.getPages());
-				    System.out.println("总页数"+iPage.getTotal());
+				   
 				    
 				    List<User> userList=iPage.getRecords();
-				    
+				    System.out.println(iPage.getRecords().size());
+				    System.out.println("数据总数："+page.getTotal());
+				    System.out.println("每页数据数量："+page.getSize());
+				    System.out.println("数据当前页："+page.getCurrent());
 					
 				}
 		
-				/*@Test
+				@Test
 				public void selectPage2() {
 					QueryWrapper<User> queryWrapper=new QueryWrapper<User>();
 					queryWrapper.ge("age",26);
@@ -72,13 +74,17 @@ public class RetrieveTest2 {
 				   // IPage<User> iPage=userMapper.selectPage(page, queryWrapper);
 				    IPage<Map<String,Object>> iPage=userMapper.selectMapsPage(page, queryWrapper);
 				    
-				    System.out.println("总页数"+iPage.getPages());
-				    System.out.println("总页数"+iPage.getTotal());
+				    
 				    
 				    List<Map<String,Object>> userList=iPage.getRecords();
 				    userList.forEach(System.out::println);
+				    
+				    System.out.println(iPage.getRecords().size());
+				    System.out.println("数据总数："+page.getTotal());
+				    System.out.println("每页数据数量："+page.getSize());
+				    System.out.println("数据当前页："+page.getCurrent());
 					
-				}*/
+				}
 		
 		
 		
